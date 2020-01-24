@@ -2370,7 +2370,7 @@ void Shell::RunShell(Isolate* isolate) {
   Local<String> name =
       String::NewFromUtf8(isolate, "(d8)", NewStringType::kNormal)
           .ToLocalChecked();
-  printf("V8 version %s (test)\n", V8::GetVersion());
+  printf("V8 version %s\n", V8::GetVersion());
   while (true) {
     HandleScope inner_scope(isolate);
     printf("d8> ");
