@@ -1,9 +1,6 @@
 name: v8-cmake
 
 on:
-  push:
-    paths:
-      - 'v8/**'
   pull_request:
     paths:
       - 'v8/**'
