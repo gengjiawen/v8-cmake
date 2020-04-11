@@ -166,6 +166,7 @@ file(GLOB interpreter-sources CONFIGURE_DEPENDS v8/src/interpreter/*.cc)
 file(GLOB json-sources CONFIGURE_DEPENDS v8/src/json/*.cc)
 file(GLOB logging-sources CONFIGURE_DEPENDS v8/src/logging/*.cc)
 file(GLOB heap-sources CONFIGURE_DEPENDS v8/src/heap/*.cc)
+file(GLOB heap-sources-header CONFIGURE_DEPENDS v8/src/heap/*.h)
 file(GLOB numbers-sources CONFIGURE_DEPENDS v8/src/numbers/*.cc)
 file(GLOB object-sources CONFIGURE_DEPENDS v8/src/objects/*.cc)
 file(GLOB parsing-sources CONFIGURE_DEPENDS v8/src/parsing/*.cc)
@@ -772,6 +773,7 @@ add_executable(mksnapshot
   ${D}/src/snapshot/embedded/platform-embedded-file-writer-mac.cc
   ${D}/src/snapshot/embedded/platform-embedded-file-writer-win.cc
   ${D}/src/snapshot/mksnapshot.cc
+  ${heap-sources-header}
   ${D}/src/snapshot/snapshot-empty.cc
 )
 
