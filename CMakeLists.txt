@@ -243,6 +243,7 @@ add_library(v8_base_without_compiler STATIC
   ${D}/src/handles/global-handles.cc
   ${D}/src/handles/handles.cc
   ${heap-sources}
+  ${heap-sources-header}
   ${D}/src/ic/call-optimization.cc
   ${D}/src/ic/handler-configuration.cc
   ${D}/src/ic/ic-stats.cc
@@ -773,7 +774,6 @@ add_executable(mksnapshot
   ${D}/src/snapshot/embedded/platform-embedded-file-writer-mac.cc
   ${D}/src/snapshot/embedded/platform-embedded-file-writer-win.cc
   ${D}/src/snapshot/mksnapshot.cc
-  ${heap-sources-header}
   ${D}/src/snapshot/snapshot-empty.cc
 )
 
