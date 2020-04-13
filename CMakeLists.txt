@@ -166,7 +166,6 @@ file(GLOB interpreter-sources CONFIGURE_DEPENDS v8/src/interpreter/*.cc)
 file(GLOB json-sources CONFIGURE_DEPENDS v8/src/json/*.cc)
 file(GLOB logging-sources CONFIGURE_DEPENDS v8/src/logging/*.cc)
 file(GLOB heap-sources CONFIGURE_DEPENDS v8/src/heap/*.cc)
-file(GLOB heap-sources-header CONFIGURE_DEPENDS v8/src/heap/*.h)
 file(GLOB numbers-sources CONFIGURE_DEPENDS v8/src/numbers/*.cc)
 file(GLOB object-sources CONFIGURE_DEPENDS v8/src/objects/*.cc)
 file(GLOB parsing-sources CONFIGURE_DEPENDS v8/src/parsing/*.cc)
@@ -243,7 +242,6 @@ add_library(v8_base_without_compiler STATIC
   ${D}/src/handles/global-handles.cc
   ${D}/src/handles/handles.cc
   ${heap-sources}
-  ${heap-sources-header}
   ${D}/src/ic/call-optimization.cc
   ${D}/src/ic/handler-configuration.cc
   ${D}/src/ic/ic-stats.cc
@@ -311,6 +309,7 @@ target_include_directories(
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/v8/include>
     $<BUILD_INTERFACE:$<TARGET_PROPERTY:v8-bytecodes-builtin-list,INTERFACE_INCLUDE_DIRECTORIES>>
     ${D}
+    ${D}/src/heap/third-party
     ${PROJECT_BINARY_DIR}
 )
 
