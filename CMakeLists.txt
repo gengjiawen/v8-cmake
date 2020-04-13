@@ -310,6 +310,7 @@ target_include_directories(
     $<BUILD_INTERFACE:$<TARGET_PROPERTY:v8-bytecodes-builtin-list,INTERFACE_INCLUDE_DIRECTORIES>>
     ${D}
     ${D}/src/heap/third-party
+    ${D}/src/heap
     ${PROJECT_BINARY_DIR}
 )
 
